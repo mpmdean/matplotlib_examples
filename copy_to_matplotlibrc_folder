@@ -1,0 +1,9 @@
+# leaving .py extention on the file to switch on syntax highlighting
+# this needs to be copied to the relevant folder
+# you may need to call
+# chmod +x copy_to_matplotlibrc_folder
+# to make this script executable
+# then
+# ./copy_to_matplotlibrc_folder
+
+cp matplotlibrc.py ~/.matplotlib/matplotlibrc
