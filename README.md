@@ -1,4 +1,4 @@
-# matplotlibrc
+# matplot_examples
 This package contains a matplotlibrc file for saving matplotlib configuration and examples of how to create attractive plots.
 
 chmod +x copy_to_matplotlibrc_folder
