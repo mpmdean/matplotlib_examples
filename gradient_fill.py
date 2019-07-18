@@ -15,6 +15,7 @@ def zfunc(x, y, fill_color='k', alpha=1.0):
     w, h = xmax-xmin, ymax-ymin
     z = np.empty((h, w, 4), dtype=float)
     rgb = mcolors.colorConverter.to_rgb(fill_color)
+    print(rgb.shape)
     z[:,:,:3] = rgb
 
     # Build a z-alpha array which is 1 near the line and 0 at the bottom.
@@ -34,7 +35,7 @@ def zfunc(x, y, fill_color='k', alpha=1.0):
     z[:,:,-1] = zalpha
     return z
 
-def gradient_fill(x, y, fill_color='k', ax=None, zfunc=None, alpha=1, zorder=1, **kwargs):
+def gradient_fill(x, y, fill_color='k', ax=None, zfunc=None, alpha=1, zorder=1, reverse=False, **kwargs):
     if ax is None:
         ax = plt.gca()
 
@@ -43,7 +44,11 @@ def gradient_fill(x, y, fill_color='k', ax=None, zfunc=None, alpha=1, zorder=1, 
         z = np.empty((h, w, 4), dtype=float)
         rgb = mcolors.colorConverter.to_rgb(fill_color)
         z[:,:,:3] = rgb
-        z[:,:,-1] = np.linspace(0, alpha, h)[:,None]
+        
+        if reverse:
+            z[:,:,-1] = np.linspace(alpha, 0, h)[:,None]
+        else:
+            z[:,:,-1] = np.linspace(0, alpha, h)[:,None]
     else:
         z = zfunc(x, y, fill_color=fill_color, alpha=alpha)
     xmin, xmax, ymin, ymax = x.min(), x.max(), y.min(), y.max()
