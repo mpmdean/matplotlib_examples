@@ -1,2 +1,2 @@
- gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=galery.pdf ex_*.pdf
+ gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=gallery.pdf ex_*.pdf
 
