@@ -1,2 +1,2 @@
-"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py" -o gallery.pdf ex_*.pdf
+ gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=galery.pdf ex_*.pdf
 
