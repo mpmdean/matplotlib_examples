@@ -1,6 +1,12 @@
 
 # Created by https://www.gitignore.io/api/macos,python,jupyternotebook
 
+# Folders
+.config/
+.ipython/
+.jupyter/
+.npm/
+
 ### JupyterNotebook ###
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
