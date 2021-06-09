@@ -1,2 +1,3 @@
- gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=gallery.pdf ex_*.pdf
+jupyter nbconvert --execute --inplace *.ipynb
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=gallery.pdf ex_*.pdf
 
