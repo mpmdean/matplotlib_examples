@@ -13,4 +13,4 @@ run locally via installing [docker](https://www.docker.com/)
 
 `pip install jupyter-repo2docker` 
 and then pointing to an appropriate docker image 
-`jupyter-repo2docker --editable --image-name jupyter/scipy-notebook` 
+`jupyter-repo2docker --editable .` 
