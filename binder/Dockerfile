@@ -10,7 +10,7 @@ ENV HOME /home/${NB_USER}
 RUN apt-get update -y
 RUN apt install libgl1-mesa-glx xvfb -y
 
-RUN mamba install --quiet --yes pyvista
+RUN mamba install -c conda-forge --yes pyvista lmfit
 
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
