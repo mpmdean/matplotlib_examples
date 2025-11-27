@@ -25,8 +25,6 @@ To copy file to the place in which matplotlib checks.
 
 run locally via installing [docker](https://www.docker.com/)  
 
-`pip install jupyter-repo2docker` 
-and then pointing to an appropriate docker image 
-`jupyter-repo2docker --editable .` 
+`docker-compose up`
 
 
